@@ -6,4 +6,4 @@
 
 |     | `donttouchme` | `chalkboard` |
 | --- | ------------- | ------------ |
-| C |![c with donttouchme](https://github.com/addie43110/donttouchme/images/dtmc.png) | ![c with chalkboard](https://github.com/addie43110/donttouchme/images/chalkboardc.png) |
+| C | <img src="images/dtmc.png"> | ![c with chalkboard](https://github.com/addie43110/donttouchme/images/chalkboardc.png) |
