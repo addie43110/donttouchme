@@ -8,7 +8,7 @@
 | --- | ------------- | ------------ |
 | C | <img src="images/dtmc.png" width="500"> | <img src="images/chalkboardc.png" width="500"> |
 | C++ | <img src="images/dtmcpp.png" width="500"> | <img src="images/chalkboardcpp.png" width="500"> |
-| Java | <img src="images/dtmjava.png" width="500"> | <img src="images/chalkboardjava/.png" width="500"> |
+| Java | <img src="images/dtmjava.png" width="500"> | <img src="images/chalkboardjava.png" width="500"> |
 | Python | <img src="images/dtmpy.png" width="500"> | <img src="images/chalkboardpy.png" width="500"> |
 
 Note: Sample code taken from https://github.com/acmeism/RosettaCodeData to display syntax highlighting colorscheme.
