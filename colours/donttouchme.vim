@@ -19,6 +19,7 @@ let g:colors_name = 'donttouchme'
 function! s:set() abort
     let white = { 'gui': '#ffffff', 'cterm': '231'}
     let black = {'gui': '#000000', 'cterm': '16'}
+    let lightestgrey = {'gui': '#eeeeee', 'cterm': '255'}
 
     " pale colours
     let whiteblue = { 'gui': '#dfffff', 'cterm': '195'}
@@ -26,16 +27,23 @@ function! s:set() abort
     let lightyellow = {'gui': '#ffffdf', 'cterm': '229'}
     let lightred = {'gui': '#ffdfdf', 'cterm': '224'}
     let lightyellowgreen = {'gui': '#dfff87', 'cterm': '192'}
+    let lightgrey = {'gui': '#dfdfdf', 'cterm': '188'}
+    let lightgolden = {'gui': '#ffdfaf', 'cterm': '223'}
+    let lightsalmon = {'gui': '#ffdfdf', 'cterm': '224'}
 
     " darker but still muted colors
     let mutemagenta = {'gui': '#875f87', 'cterm': '96'}
+    let mutepurple = {'gui': '#875fd7', 'cterm': '97'}
     let mutemud = {'gui': '#875f5f', 'cterm': '95'}
-    let muteorange = {'gui': '#875f00', 'cterm': '94'}
+    let muteorange = {'gui': '#af5f00', 'cterm': '130'}
     let muteslate = {'gui': '#878787', 'cterm': '102'}    
     let muteteal = {'gui': '#87af87', 'cterm': '108'}
-    let mutegreen = {'gui': '#5faf00', 'cterm': '76'}
-    let mutered = {'gui': '#5f0000', 'cterm': '52'}
-    let muteyellow = {'gui': '#afaf00', 'cterm': '142'}
+    let muterainforest = {'gui': '#5f875f', 'cterm': '65'}
+    let mutegreen = {'gui': '#5faf5f', 'cterm': '71'}
+    let mutered = {'gui': '#af5f5f', 'cterm': '131'}
+    let muteyellow = {'gui': '#dfaf5f', 'cterm': '179'}
+    let muteblue = {'gui': '#87afd7', 'cterm': '110'}
+    let mutemauve = {'gui': '#8787af', 'cterm': '103'}
 
     " dark or accent colours
     let darkgrey = {'gui': '#303030', 'cterm': '236'}
@@ -54,12 +62,12 @@ function! s:set() abort
 
     let highlight_group = {}
 
-    let highlight_group.Normal = [darkgrey, none, none, none]
+    let highlight_group.Normal = [muteslate, none, none, none]
     let highlight_group.Visual = [none, none, none, none]
     " Cursor
     let highlight_group.Cursor = [muteslate, whiteblue, none, none]
     if &cursorline
-        let highlight_group.CursorLine = [none, whiteblue, none, none]
+        let highlight_group.CursorLine = [none, lightsalmon, none, none]
         let highlight_group.CursorLineNr = [whiteblue, lightyellow, bolditalic, none]
     else
         let highlight_group.CursorLineNr = [whiteblue, none, bolditalic, none]
@@ -71,26 +79,26 @@ function! s:set() abort
     " Folds
     let highlight_group.Folded = [whiteblue, lightyellowgreen, none, none]
 
-    let highlight_group.MatchParen = [lightred, whitepurple, none, none]
+    let highlight_group.MatchParen = [muteblue, whitepurple, none, none]
 
     " Syntax groups
     let highlight_group.Comment = [mutegreen, none, underline, none]
-    let highlight_group.Identifier = [mutered, none, none, none]
-    let highlight_group.Statement = [mutemud, none, bold, none]
+    let highlight_group.Identifier = [mutemauve, none, none, none]
+    let highlight_group.Statement = [mutered, none, bold, none]
     let highlight_group.Function = [muteteal, none, bold, none]
     let highlight_group.Constant = [mutemagenta, none, none, none]
-    let highlight_group.String = [mutered, none, italic, none]
-    let highlight_group.Number = [muteslate, none, none, none]
-    let highlight_group.Type = [muteyellow, none, none, none]
-    let highlight_group.Special = [muteteal, none, none, none]
-    let highlight_group.PreProc = [lightred, none, bold, none]
-    let highlight_group.Todo = [whiteblue, alertred, underline, none]
+    let highlight_group.String = [muteyellow, none, italic, none]
+    let highlight_group.Number = [mutepurple, none, none, none]
+    let highlight_group.Type = [muteblue, none, none, none]
+    let highlight_group.Special = [muterainforest, none, none, none]
+    let highlight_group.PreProc = [mutemud, none, bold, none]
+    let highlight_group.Todo = [black, alertred, underline, none]
     let highlight_group.Error = [black, alertred, bold, none]
     let highlight_group.Underlined = [alertred, none, underline, none]
  
 
-    let highlight_group.ModeMsg = [lightred, none, bold, none]
-    let highlight_group.SpecialKey = [whiteblue, none, none, none]
+    let highlight_group.ModeMsg = [muteblue, none, bold, none]
+    let highlight_group.SpecialKey = [muteorange, none, none, none]
 
     for [group, colors] in items(highlight_group)
         execute printf('highlight %s guifg=%s guibg=%s gui=%s, guisp=%s ctermfg=%s ctermbg=%s cterm=%s',
